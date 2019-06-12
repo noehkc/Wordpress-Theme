@@ -29,7 +29,7 @@ class configurewebsite_Settings_Page {
 		$slug = 'configurewebsite';
 		$callback = array($this, 'wph_settings_content');
 		$icon = 'dashicons-admin-settings';
-		$position = 2;
+		$position = 99;
 		add_menu_page($page_title, $menu_title, $capability, $slug, $callback, $icon, $position);
 	}
 
@@ -60,6 +60,49 @@ class configurewebsite_Settings_Page {
 				'section' => 'configurewebsite_section',
 				'returnvalue' => 'id',
 				'desc' => 'Upload your site Logo',
+			),
+			array(
+				'label' => 'Facebook',
+				'id' => 'facebook',
+				'type' => 'text',
+				'section' => 'configurewebsite_section',
+				'desc' => 'Enter your Facebook URL',
+			),
+			array(
+				'label' => 'Twitter',
+				'id' => 'twitter',
+				'type' => 'text',
+				'section' => 'configurewebsite_section',
+				'desc' => 'Enter your Twitter Handle',
+			),
+			array(
+				'label' => 'Instagram',
+				'id' => 'instagram_text',
+				'type' => 'text',
+				'section' => 'configurewebsite_section',
+				'desc' => 'Enter your Instagram Handle',
+			),
+			array(
+				'label' => 'Slider',
+				'id' => 'slider',
+				'type' => 'media',
+				'section' => 'configurewebsite_section',
+				'returnvalue' => 'url',
+				'desc' => 'Upload your slide show images',
+			),
+			array(
+				'label' => 'font-color-primary',
+				'id' => 'font-color-primary',
+				'type' => 'color',
+				'section' => 'configurewebsite_section',
+				'desc' => 'Primary Font Color',
+			),
+			array(
+				'label' => 'font-color-secondary',
+				'id' => 'font-color-secondary',
+				'type' => 'color',
+				'section' => 'configurewebsite_section',
+				'desc' => 'Secondary Font Color',
 			),
 		);
 		foreach( $fields as $field ){
